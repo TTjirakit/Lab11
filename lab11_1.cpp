@@ -7,21 +7,17 @@ using namespace std;
 int main(){
     cout << "Press Enter 3 times to reveal your future.\n";
     int i=0;
+    string grade[] = {"A","+B","B","+C","C","+D","D","F","W"}; 
+
     while(i<3){
         cin.get();
         i++;
     }
     srand(time(0));
     int x = rand()%9;
-    if(x == 0) cout << "You will get A in this 261102.";
-    else if(x == 1) cout << "You will get B+ in this 261102.";
-    else if(x == 2) cout << "You will get B in this 261102.";
-    else if(x == 3) cout << "You will get C+ in this 261102.";
-    else if(x == 4) cout << "You will get C in this 261102.";
-    else if(x == 5) cout << "You will get D+ in this 261102.";
-    else if(x == 6) cout << "You will get D in this 261102.";
-    else if(x == 7) cout << "You will get F in this 261102.";
-    else cout << "You will get W in this 261102.";
+    string g = grade[x];
+    
 
+    cout << "You will get " << g << " in this 261102.";
     return 0;
 }
